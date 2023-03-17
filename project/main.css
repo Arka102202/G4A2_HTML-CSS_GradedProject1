@@ -1,0 +1,186 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a,
+button,
+li {
+  all: unset; }
+
+:root {
+  --gray: #505050; }
+
+html {
+  font-size: 62.5%; }
+
+header {
+  width: calc(100% - 0rem);
+  background-color: var(--gray);
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  header p {
+    padding: 1rem; }
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #7f7f7f;
+  padding: 0 2rem;
+  color: #fff;
+  font-size: 2rem;
+  height: 4rem;
+  position: sticky;
+  top: 0;
+  z-index: 1; }
+  nav .nav__element {
+    width: 15rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    cursor: pointer; }
+    nav .nav__element:hover, nav .nav__element:focus, nav .nav__element:focus-within {
+      background-color: #262626; }
+      nav .nav__element:hover ul, nav .nav__element:focus ul, nav .nav__element:focus-within ul {
+        display: grid; }
+  nav div {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: relative; }
+    nav div ul {
+      width: 100%;
+      position: absolute;
+      display: grid;
+      justify-items: start;
+      align-items: center;
+      justify-items: stretch;
+      top: 100%;
+      background-color: #f5f5f5;
+      color: #58a7dd;
+      font-size: 1.6rem;
+      display: none; }
+      nav div ul li {
+        padding: 0.5rem 1rem; }
+        nav div ul li:hover {
+          background-color: #e7e7e7; }
+
+.section__animation {
+  width: calc(100% - 1rem);
+  height: 33.5vw;
+  margin: 0.5rem;
+  border: 2px solid steelblue;
+  background: url(/Images/Animation/ani1-1.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: flash 15s infinite; }
+
+@keyframes flash {
+  20% {
+    background: url(/Images/Animation/ani2.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  40% {
+    background: url(/Images/Animation/ani3-1.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  60% {
+    background: url(/Images/Animation/ani4-1.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  80% {
+    background: url(/Images/Animation/ani5.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; } }
+
+.section__products {
+  display: grid;
+  justify-items: start;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  padding: 1rem 2rem; }
+  .section__products .container {
+    display: grid;
+    justify-items: start;
+    align-items: center;
+    gap: 2rem;
+    width: 100%; }
+    .section__products .container > p {
+      font-size: 2.4rem;
+      font-weight: 600; }
+    .section__products .container ul {
+      display: grid;
+      justify-items: start;
+      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+      gap: 2rem;
+      width: 100%; }
+      .section__products .container ul li {
+        min-width: 28rem;
+        max-width: 28rem;
+        height: 28rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+        box-shadow: 0 0 2rem 0.5rem rgba(0, 0, 0, 0.11);
+        border-radius: 0.5rem;
+        transition: all 0.3s; }
+        .section__products .container ul li .product__img__container {
+          width: 60%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-self: center; }
+          .section__products .container ul li .product__img__container img {
+            width: 100%; }
+        .section__products .container ul li p {
+          font-size: 1.4rem;
+          font-weight: 40;
+          color: #58a7dd; }
+        .section__products .container ul li .section__product__title,
+        .section__products .container ul li button {
+          font-size: 1.6rem;
+          font-weight: 600;
+          color: #262626; }
+        .section__products .container ul li button {
+          width: calc(100% - 2rem);
+          display: grid;
+          justify-items: center;
+          align-items: center;
+          padding: 1rem;
+          background-color: #e6e6fa;
+          color: #ffa50d;
+          border: 1px solid #5454fe;
+          border-radius: 0.5rem; }
+          .section__products .container ul li button:focus {
+            background-color: #faeae6;
+            border: 1px solid #00ff4c; }
+        .section__products .container ul li:hover {
+          transform: scale(1.05); }
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 2rem;
+  background-color: #000000;
+  color: #fff;
+  font-size: 1.6rem; }
