@@ -119,27 +119,26 @@
             </div>
 
             <script>
-              const checkboxes = document.querySelectorAll(
+             const checkboxes = document.querySelectorAll(
                 `input[type="checkbox"]`
               );
-
               let checked = false;
-
               checkboxes.forEach((item) =>
-                item.addEventListener("click", () => {
-                  checked = !checked;
-                  document.querySelector(".p").classList.remove("display");
-                })
+                item.addEventListener("click", () =>
+                  document.querySelector(".p").classList.remove("display")
+                )
               );
-
+              const isAnyChecked = () => {
+                checkboxes.forEach((item) => {
+                  if (item.checked) checked = true;
+                });
+              };
               const form = document.querySelector("form");
               form.addEventListener("submit", (e) => {
                 e.preventDefault();
+                isAnyChecked();
                 if (checked) form.submit();
-                else {
-                  document.querySelector(".p").classList.add("display");
-                  console.log("some");
-                }
+                else document.querySelector(".p").classList.add("display");
               });
             </script>
           </div>
